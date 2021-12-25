@@ -1,5 +1,98 @@
-header {
-	p {
-		color: aquamarine;
+.header {
+	background-color: $accentColor;
+	padding: 0px 18px 0px 18px;
+	height: 140px;
+	@media screen and (min-width: 816px) {
+		height: 100px;
+	}
+	&__navigation {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		margin-bottom: 40px;
+		@media screen and (min-width: 816px) {
+			margin-bottom: 2px;
+		}
+	}
+
+	&__logo {
+		margin-top: 14px;
+		font-size: 22px;
+		font-weight: 500;
+		color: white;
+		line-height: 26px;
+		@media screen and (min-width: 560px) {
+			font-size: 26px;
+		}
+		@media screen and (min-width: 664px) {
+			font-size: 30px;
+		}
+	}
+
+	&__buttons {
+		display: flex;
+	}
+
+	&__button {
+		font-size: 14px;
+		font-weight: 500;
+		color: white;
+		background-color: transparent;
+		text-transform: uppercase;
+		transition: color 0.3s $animationFunction;
+		&:hover {
+			color: rgb(230, 230, 230);
+		}
+		@media screen and (min-width: 560px) {
+			font-size: 16px;
+		}
+		@media screen and (min-width: 664px) {
+			font-size: 18px;
+		}
+	}
+
+	&__search {
+		position: relative;
+		margin: 0 auto;
+		&::after {
+			position: absolute;
+			content: "";
+			top: 18px;
+			left: 0;
+			width: 100%;
+			height: 0.5px;
+			background-color: $mainColorDark;
+		}
+		max-width: 336px;
+	}
+
+	&__input {
+		background-color: transparent;
+		width: 100%;
+		margin: 0px 0px 40px 0px;
+		@media screen and (min-width: 816px) {
+			margin: 0px 0px 30px 0px;
+		}
+		&::placeholder {
+			color: $mainColorDark;
+			font-family: "Roboto", sans-serif;
+		}
+	}
+
+	&__search-button {
+		position: absolute;
+		top: 0;
+		right: 0;
+		background-color: transparent;
+	}
+	.header-events {
+		border-bottom: 3px solid white;
+		transition: border-bottom 0.3s, color 0.3s;
+		&:hover {
+			border-bottom: 3px solid rgb(230, 230, 230);
+		}
+	}
+	.header-my-cabinet {
+		margin-left: 13px;
 	}
 }
