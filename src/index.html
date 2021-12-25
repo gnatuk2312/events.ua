@@ -12,7 +12,10 @@
 
 <body>
 	<!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
-	<include src="./partials/mainPage-header.html"></include>
+	<div class="wrapper">
+		<include src="./partials/mainPage-header.html"></include>
+		<include src="./partials/mainPage-footer.html"></include>
+	</div>
 
 	<!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
 	<script src="./index.js"></script>

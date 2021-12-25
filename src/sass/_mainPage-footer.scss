@@ -1,0 +1,31 @@
+.footer {
+	padding: 26px 26px;
+	@media screen and (min-width: 767px) {
+		padding: 40px 26px;
+	}
+	.container {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		row-gap: 6px;
+		color: $mainColorDark;
+		font-size: 14px;
+		@media screen and (min-width: 767px) {
+			font-size: 16px;
+		}
+	}
+	&__rights {
+		margin-right: 4px;
+	}
+
+	&__with-love {
+		display: flex;
+		p {
+			margin-right: 10px;
+		}
+		svg {
+			margin-right: 10px;
+		}
+	}
+}
