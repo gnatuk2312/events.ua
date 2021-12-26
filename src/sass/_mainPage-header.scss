@@ -31,6 +31,12 @@
 
 	&__buttons {
 		display: flex;
+		.header-button-active {
+			border-bottom: 3px solid white;
+			&:hover {
+				border-bottom: 3px solid rgb(230, 230, 230);
+			}
+		}
 	}
 
 	&__button {
@@ -39,7 +45,7 @@
 		color: white;
 		background-color: transparent;
 		text-transform: uppercase;
-		transition: color 0.3s $animationFunction;
+		transition: border-bottom 0.3s, color 0.3s;
 		&:hover {
 			color: rgb(230, 230, 230);
 		}
@@ -86,11 +92,6 @@
 		background-color: transparent;
 	}
 	.header-events {
-		border-bottom: 3px solid white;
-		transition: border-bottom 0.3s, color 0.3s;
-		&:hover {
-			border-bottom: 3px solid rgb(230, 230, 230);
-		}
 	}
 	.header-my-cabinet {
 		margin-left: 13px;
