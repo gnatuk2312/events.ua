@@ -17,6 +17,7 @@ export default class CreateEvent {
 		const yourEventsImgSpan = document.createElement('SPAN');
 		yourEventsImgSpan.textContent = 'Image isn`t uploaded';
 		const yourEventsImgImg = document.createElement('IMG');
+		yourEventsImgImg.src = photo;
 		const yourEventsImg = document.createElement('DIV');
 		yourEventsImg.classList.add('your-events__img');
 		const yourEventsTitle = document.createElement('H2');
@@ -46,21 +47,19 @@ export default class CreateEvent {
 			const todo = item.parentElement.parentElement;
 			todo.remove();
 		};
-
-
 	}
 
-
-
-
 	init() {
+		console.log(this.fileInput);
+		console.log(this.fileInput.files);
+
+
 		this.submit.addEventListener('click', (e) => {
 			e.preventDefault();
-			this.createElement(this.titleInput.value, null, this.placeInput.value);
+			this.createElement(this.titleInput.value, this.fileInput.files[0], this.placeInput.value);
 		});
 		this.wrapper.addEventListener('click', (e) => {
 			this.deleteEvent(e);
 		})
-
 	}
 }
