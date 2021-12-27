@@ -14,7 +14,6 @@
 	}
 
 	&__item {
-		cursor: pointer;
 		position: relative;
 	}
 
@@ -61,10 +60,15 @@
 		color: $accentColor;
 	}
 	&__close {
-		z-index: 3;
+		z-index: 5;
 		cursor: pointer;
 		position: absolute;
 		top: 4px;
 		right: 4px;
+		.events__image {
+			z-index: 6;
+			width: 32px;
+			height: 32px;
+		}
 	}
 }
